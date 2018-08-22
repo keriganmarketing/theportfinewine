@@ -12,12 +12,7 @@
                     <social-icons :size="37" :margin=".25" class="d-flex social-icons" ></social-icons>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="footer-content">
-                    <h4 class="short-underline">Contact Us</h4>
-                    <contact-form></contact-form>
-                </div>
-            </div>
+            
             <div class="col-sm-6 col-lg-3 text-md-right">
                 <div class="footer-content">
                     <main-menu :main-nav="{{ website_menu('footer-navigation') }}" class="footer-menu" ></main-menu>
