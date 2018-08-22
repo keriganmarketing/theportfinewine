@@ -30,7 +30,7 @@ const app = new Vue({
     methods: {
         handleScroll () {
             this.scrollPosition = window.scrollY;
-            this.isScrolling = this.scrollPosition > 40;
+            this.isScrolling = this.scrollPosition > 160;
         },
         toggleMenu() {
             this.mobileMenuOpen = ! this.mobileMenuOpen;

@@ -32760,7 +32760,7 @@ var app = new Vue({
     methods: {
         handleScroll: function handleScroll() {
             this.scrollPosition = window.scrollY;
-            this.isScrolling = this.scrollPosition > 40;
+            this.isScrolling = this.scrollPosition > 160;
         },
         toggleMenu: function toggleMenu() {
             this.mobileMenuOpen = !this.mobileMenuOpen;

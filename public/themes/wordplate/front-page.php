@@ -1,6 +1,7 @@
 <?php
 
 use KeriganSolutions\KMATestimonials\Testimonial;
+
 $testimonials = new Testimonial;
 $featuredTestimonial = $testimonials->queryTestimonials(true, 1, 'date', 'DESC', 115);
 
@@ -17,6 +18,11 @@ bladerunner('views.pages.front', [
         'title' => get_field('feat_2_headline'),
         'text' => get_field('feat_2_text'),
         'link' => get_field('feat_2_link')
+    ],
+    'featureBox3' => [
+        'title' => get_field('feat_3_headline'),
+        'text' => get_field('feat_3_text'),
+        'link' => get_field('feat_3_link')
     ],
     'projectsHeader' => get_field('projects_header'),
     'featuredTestimonial' => $featuredTestimonial
