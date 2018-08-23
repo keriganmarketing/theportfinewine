@@ -158,15 +158,32 @@ main {
     box-shadow: none;
   }
   .mast {
-      padding-bottom: 3rem;
-
-      @media (min-width: 768px) {
-          padding-bottom: 4.5rem;
-      }
-
-      @media (min-width: 1200px) {
-          padding-bottom: 6rem;
-      }
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    @media (min-width: 768px) {
+      padding-bottom: 4.5rem;
+    }
+    @media (min-width: 1200px) {
+      padding-bottom: 6rem;
+    }
+  }
+  .centered {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      color: orange;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      font-size: 8em;
+    }
+    p {
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.2em;
+      line-height: 1em;
+    }
   }
   article {
     padding: 2rem 1rem 1rem;
@@ -312,38 +329,10 @@ main {
   color: #FFF;
 }
 
-// Feature Box Section
-.feature-box-section {
+// Card Section
+.card-section {
   padding: 3rem 0;
-  background: orange;
-  .box-container {
-    margin: 1rem 0;
-  }
-  .feature-box {
-    min-height: 200px;
-    border: solid 2px white;
-    padding: 1.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    h3 {
-      margin-bottom: 1rem;
-      font-family: sans-serif;
-      font-size: 2.4em;
-      @media (min-width: 768px) {
-        max-width: 188px;
-        margin-bottom: 2rem;
-      }
-    }
-    p {
-      margin-bottom: 1rem;
-      @media (min-width: 768px) {
-        margin-bottom: 2rem;
-      }
-    }
-  }
+  background: orangered;
 }
 
 article h2,
@@ -469,16 +458,4 @@ footer {
     display: inline-block;
     padding: 0 1rem;
   }
-}
-
-/* Centered Text on Image */
-
-.centered {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: transparent;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
 }
