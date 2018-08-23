@@ -24,9 +24,14 @@
                     <div class="col-md-6">
                         <img src="themes/wordplate/assets/images/phoneimage.png" alt="assorted liquors" style="width: 90%;">
                     </div>
-                    <div class="text-left">
-                        <h1>Cheers!</h1>
-                        <p>This is where the content will go.</p>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <img src="themes/wordplate/assets/images/smollogo.png" alt="wheel logo">
+                            <div class="text">
+                                <h1>Cheers!</h1>
+                                <p>I realize this is messed up, please don't judge me.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,18 +40,22 @@
         <div><h1 class="mast"></h1></div>
 
         <div class="card-section">
-            <div class="container">
+            <div class="text-center">
+                <h1>Services</h1>
+            </div>
+            <div class="container card-one vmiddle">
                 <div class="row">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-4 col-lg-4">
                         <div class="card text-center" style="width: 18rem;">
                             <img class="card-img-top" src='/themes/wordplate/assets/images/specialrequests.png' alt="Taylor Bottls">
+                            <img src='/themes/wordplate/assets/images/thebumptm.png' style="vbottom">
                             <div class="card-body">
                                 <h5 class="card-title">Special Requests</h5>
                                 <p class="card-text">We are devoted to finding unique wine, spirits and beer to offer our most discriminating customers. But if you don't find what you're looking for, our team is always ready to assist, from tracking down one rare bottle to helping stock your bar for your next event.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-4 col-lg-4">
                         <div class="card text-center" style="width: 18rem;">
                             <img class="card-img-top" src='/themes/wordplate/assets/images/specialevents.png' alt="Wine Bottles">
                             <div class="card-body">
@@ -55,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-4 col-lg-4">
                         <div class="card text-center" style="width: 18rem;">
                             <img class="card-img-top" src='/themes/wordplate/assets/images/craftbeer.png' alt="Voodoo Ranger">
                             <div class="card-body">
@@ -67,6 +76,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <h1>Just a lil itty bitty section where the insta feed will go</h1>
+        </div>
+
+
+        <div class="row background-img vmiddle">
+            <div class="col-12 text-center">
+                <img src="themes/wordplate/assets/images/theportfinewine.png" class="img-fluid">
+            </div>
+        </div>
+
+       
 
     @endwhile
 @else
