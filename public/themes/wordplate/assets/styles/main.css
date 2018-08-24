@@ -12306,15 +12306,47 @@ main article h2::after {
 }
 
 .card-section {
-  padding: 3rem 0;
   background-image: url("/themes/wordplate/assets/images/redbackground.png");
   background-size: cover;
   width: 100%;
-  height: 1010px;
+  height: 900px;
+  padding: 0 4rem;
 }
 
-.card-one {
-  padding: 8rem 4rem 4rem 0;
+.card-section .card-one {
+  padding: 2rem 0 0 2rem;
+}
+
+.card-section .vbottom {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-section h1 {
+  padding: 2rem;
+}
+
+.big-text {
+  line-height: 1.8em;
+}
+
+.big-text h2 {
+  font-size: 1.6em;
+  font-weight: 100;
+}
+
+.big-text p {
+  font-size: 1em;
+}
+
+.big-text .big-text-one {
+  line-height: 2em;
+}
+
+.haha-help {
+  padding-left: 6rem;
 }
 
 .background-img {
@@ -12325,18 +12357,11 @@ main article h2::after {
   height: 800px;
 }
 
-.vmiddle {
+.background-img.vmiddle {
   display: flex;
   align-items: center;
   padding-left: 8rem;
-  padding-top: 3rem;
-}
-
-.vbottom {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
+  padding-top: 4rem;
 }
 
 @media (min-width: 576px) {
