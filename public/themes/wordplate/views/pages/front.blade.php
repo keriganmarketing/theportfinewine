@@ -28,7 +28,7 @@
                         <div class="row">
                             <img src="themes/wordplate/assets/images/smollogo.png" alt="wheel logo">
                             <div class="text" align="left" style="vertical-align: top;">
-                                <h1>Cheers!</h1>
+                                <h1 style="font-family: playfair-display-bold">Cheers!</h1>
                                 &nbsp;
                                 <p style="font-family: poppins-light;">The Port Fine Wine and Spirits has what you need. We offer over 100 brands of ice cold beer, 400 wine varietals and the largest selection of spirits from Mexico beach to Cape San Blas. With over 10,000 bottles in stock, we are sure you will find something to sip on. And if you have special requests, contact us and we'll have your order waiting when you arrive on vacation.</p>
                                 &nbsp;
