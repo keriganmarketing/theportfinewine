@@ -62,8 +62,8 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $teal;
-$secondary:     $cyan;
+$primary:       #dfb57b;
+$secondary:     #e13951;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -172,7 +172,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1270px
 );
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -187,7 +187,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1210px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -233,8 +233,8 @@ $transition-collapse:         height .35s ease;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Montserrat', sans-serif;
-$font-family-serif:           Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:      $poppins;
+$font-family-serif:           $playfair;
 $font-family-monospace:       "Liberation Mono", "Courier New", monospace;
 $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case

@@ -16,15 +16,63 @@ class ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb
         'a21e70ca1cdeca5aa284b987d10b88cd' => __DIR__ . '/..' . '/wordplate/framework/src/helpers.php',
     );
 
-    public static $firstCharsPsr4 = array (
-        'W' => true,
-        'S' => true,
-        'P' => true,
-        'K' => true,
-        'I' => true,
-        'D' => true,
-        'C' => true,
-        'B' => true,
+    public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'WordPlate\\' => 10,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\VarDumper\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\Debug\\' => 24,
+        ),
+        'P' => 
+        array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
+            'Psr\\Container\\' => 14,
+        ),
+        'K' => 
+        array (
+            'KeriganSolutions\\SocialMedia\\' => 29,
+            'KeriganSolutions\\KMATestimonials\\' => 33,
+            'KeriganSolutions\\KMATeam\\' => 25,
+            'KeriganSolutions\\KMASlider\\' => 27,
+            'KeriganSolutions\\KMAPortfolio\\' => 30,
+            'KeriganSolutions\\KMAContactInfo\\' => 32,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\View\\' => 16,
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Filesystem\\' => 22,
+            'Illuminate\\Events\\' => 18,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
+            'Illuminate\\Config\\' => 18,
+        ),
+        'D' => 
+        array (
+            'Dotenv\\' => 7,
+            'Doctrine\\Common\\Inflector\\' => 26,
+        ),
+        'C' => 
+        array (
+            'Composer\\Installers\\' => 20,
+        ),
+        'B' => 
+        array (
+            'Brain\\Hierarchy\\' => 16,
+            'Bladerunner\\' => 12,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -846,7 +894,7 @@ class ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->firstCharsPsr4 = ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb::$firstCharsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8eba9253e37d8bf6090f3791973b4ffb::$prefixesPsr0;

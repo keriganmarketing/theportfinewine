@@ -175,4 +175,13 @@ function registerFields(){
         'instructions' => '',
         'required'     => 0,
     ) );
+
+    acf_add_local_field(array(
+        'key' => 'hours',
+        'label' => 'Hours',
+        'name' => 'hours',
+        'type' => 'text',
+        'parent' => 'group_contact_info',
+    ));
+
 }
