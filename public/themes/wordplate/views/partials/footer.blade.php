@@ -2,20 +2,32 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-lg-3 text-center text-lg-left">
+            <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <h2 class="playfair text-center">Open Hours</h2>
-                    <p><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a> <em>phone</em></p>
-                    <p><a href="tel:{{ get_field('fax', 'option') }}">{{ get_field('fax', 'option') }}</a> <em>fax</em></p>
-                    <p>{!! nl2br(get_field('address', 'option')) !!}</p>
-                    <h4 class="short-underline">Connect</h4>
-                    <social-icons :size="37" :margin=".25" class="d-flex social-icons" ></social-icons>
+                    <h1 class="text-center">Open Hours</h1>
+                    <p class="text-center">Monday-Saturday:<strong>10am-9pm</strong></p>
+                    <p class="text-center">Sunday:<strong>10am-6pm</strong></p>
+                    <p class="text-center">All times Eastern</p>
                 </div>
             </div>
-            
-            <div class="col-sm-6 col-lg-3 text-md-right">
+
+            <div class="col-sm footer-center">
+                <div class="text-center foot-logo">
+                    <img src="/themes/wordplate/assets/images/footerlogo.png" alt="THe Port Fine Wine & Spirits" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <main-menu :main-nav="{{ website_menu('footer-navigation') }}" class="footer-menu" ></main-menu>
+                    <h1 class=" text-center">Quick Contacts</h1>
+                    <!--
+                        This Address is a placeholder
+                    -->
+                    <p class="text-center">411 Monument Ave, Port St. Joe, FL 32456</p>
+                    <p class="text-center">{!! nl2br(get_field('address', 'option')) !!}</p>
+                    <p class="text-center"><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a> <em>850-229-2977</em></p>
+                    <p class="text-center contact-info"><a href="mailto:{{ get_field('email', 'option') }}">{{ get_field('email', 'option') }}</a>boyd@theportfinewine.com</p>
+                    <social-icons :size="37" :margin=".25" class="d-flex social-icons" ></social-icons>
                 </div>
             </div>
             
