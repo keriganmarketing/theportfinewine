@@ -1,14 +1,17 @@
 // Full page Layout
 html {
   height: 100%; // Button overrides
+
   .btn {
     text-transform: uppercase;
     font-size: .9em;
     font-weight: $font-weight-bold;
+
     &.btn-lg {
       border-width: 2px;
     }
   }
+
   * {
     text-rendering: unset;
   }
@@ -17,33 +20,42 @@ html {
 body {
   height: 100%;
   font-size: 14px;
+
   #app {
     height: auto !important;
     min-height: 100%;
     overflow-x: initial;
+
     .site-wrapper {
       display: flex;
       flex-direction: column;
+
       main {
         flex-grow: 1;
+
         &.contact {
           background-color: $black;
+
           iframe {
             height: 100%;
             min-height: 350px;
             flex-grow: 1;
+
             @media (min-width: 1200px) {
               min-height: 420px;
             }
+
             @media (min-width: 2200px) {
               min-height: 500px;
             }
+
             @media (min-width: 2600px) {
               min-height: 650px;
             }
           }
         }
       }
+
       &.full-height {
         height: 100vh;
       }
@@ -65,7 +77,7 @@ body {
     display: block;
     padding: 1rem 1.5rem;
 
-    @media (min-width: 1240px){
+    @media (min-width: 1240px) {
       margin: 2rem 0 0 0;
       padding: 0 .5rem;
     }
@@ -83,32 +95,34 @@ body {
   .mini-navigation {
     padding: 1rem 0 0;
 
-    @media (min-width:768px){
+    @media (min-width: 768px) {
       padding: 1rem 0;
       border-bottom: 1px solid #ddd;
     }
+
     .navbar-nav {
       li {
         color: #999;
         padding: 0 20px 0 0;
-  
+
         a {
           color: #999;
         }
-        
+
         &:first-child {
           padding-left: 0;
         }
-  
+
         &:last-child {
           padding-right: 0;
         }
       }
-    } 
+    }
+
     p {
       color: #999;
       margin: 0;
-    }   
+    }
   }
 
   .main-navigation {
@@ -123,6 +137,7 @@ body {
         font-weight: 700;
         color: $dark;
         padding: 2rem 0 1;
+
         &:hover {
           color: $primary;
         }
@@ -135,17 +150,16 @@ body {
       &:last-child {
         padding-right: 0;
       }
-    } 
+    }
   }
-
 }
 
 .mobile-menu-open,
 .scrolling {
   .top {
     background-color: #FFF;
-    
-    @media (min-width:768px){
+
+    @media (min-width: 768px) {
       position: fixed;
       box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
     }
@@ -166,7 +180,6 @@ body {
     .main-navigation {
       padding: .25rem 0 0;
     }
-
   }
 }
 
@@ -179,16 +192,20 @@ main {
     height: 300px;
     background: url('/themes/wordplate/assets/images/mast.jpg') center no-repeat;
     background-size: cover;
-    @media (min-width: 576px){
+
+    @media (min-width: 576px) {
       height: 400px;
     }
-    @media (min-width: 768px){
+
+    @media (min-width: 768px) {
       height: 550px;
     }
-    @media (min-width: 992px){
+
+    @media (min-width: 992px) {
       height: 700px;
     }
-    @media (min-width: 1270px){
+
+    @media (min-width: 1270px) {
       height: 830px;
     }
 
@@ -196,8 +213,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
+
   .centered {
     padding: 0 1rem 1rem;
 
@@ -207,23 +224,26 @@ main {
       font-family: sans-serif;
       font-size: 3em;
       font-family: $playfair;
-      text-shadow: 0 0 15px rgba(0,0,0,.5);
+      text-shadow: 0 0 15px rgba(0, 0, 0, .5);
 
-      @media (min-width: 576px){
+      @media (min-width: 576px) {
         font-size: 4.5em;
       }
-      @media (min-width: 768px){
+
+      @media (min-width: 768px) {
         padding-bottom: 1.5rem;
         font-size: 7em;
       }
-      @media (min-width: 992px){
+
+      @media (min-width: 992px) {
         font-size: 9em;
       }
-      @media (min-width: 1270px){
+
+      @media (min-width: 1270px) {
         font-size: 11em;
       }
-
     }
+
     p {
       color: white;
       line-height: 1.5em;
@@ -231,39 +251,48 @@ main {
       max-width: 100% !important;
       margin: auto;
 
-      @media (min-width: 768px){
+      @media (min-width: 768px) {
         font-size: 1.4em;
       }
     }
   }
+
   article {
     padding: 2rem 1rem 1rem;
     text-align: left;
     background-color: #FFF;
+
     @media (min-width: 576px) {
       text-align: justify;
     }
+
     header {
       margin-bottom: 1rem;
     }
+
     .fittext span,
     h1 {
       color: $primary;
+      font-family: $playfair;
       text-transform: uppercase;
       font-weight: $font-weight-bolder;
       letter-spacing: 2px;
     }
+
     p,
     ul,
     ol {
       line-height: 1.8em;
+      font-family: $poppins;
     }
+
     h2 {
       margin-top: 3rem;
       margin-bottom: 1rem;
       color: $secondary;
       font-weight: 400;
       text-transform: capitalize;
+
       &::after {
         content: none;
         background-color: $secondary;
@@ -274,9 +303,11 @@ main {
 
 .section-button {
   padding: 0 1rem 3rem;
+
   @media (min-width: 576px) {
     padding: 0 1rem 4rem;
   }
+
   @media (min-width: 768px) {
     padding: 1rem 1rem 5rem;
   }
@@ -310,35 +341,39 @@ main {
 
   .bump {
     position: relative;
-  z-index: 2;
-  margin-top: -19px;
+    z-index: 2;
+    margin-top: -19px;
   }
 
   .card-one {
     padding: 2rem 0 0 2rem;
   }
+
   .vbottom {
     display: flex;
     align-items: center;
     position: absolute;
     bottom: 0;
   }
+
   h1 {
     padding: 2rem;
   }
-  
 }
 
 // Text edits for the card section I'm so sorry I'm like this please don't hate me I'm trying my best
 .big-text {
   line-height: 1.8em;
-  h2{
+
+  h2 {
     font-size: 1.6em;
-    font-weight: 100;
+    font-weight: 200;
   }
+
   p {
     font-size: 1em;
   }
+
   .big-text-one {
     line-height: 2em;
   }
@@ -348,6 +383,43 @@ main {
   padding-left: 6rem;
 }
 
+.col-xs-12 {
+  background: #9c6;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  min-height: 200px;
+}
+
+.half-left img,
+.half-right img {
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 481px) {
+
+  .half-left,
+  .half-right {
+    overflow: hidden;
+    padding: 0;
+    position: responsive;
+  }
+
+  .half-left>.container,
+  .half-right>.container {
+    position: absolute;
+    top: 0;
+  }
+
+  .half-left>.container {
+    right: 0;
+  }
+
+  .half-right>.container {
+    left: 0;
+  }
+}
+
 // Map Section
 .background-img {
   min-height: 860px;
@@ -355,11 +427,28 @@ main {
   background-size: cover;
   width: 100%;
   height: 800px;
+
   &.vmiddle {
     display: flex;
     align-items: center;
     padding-left: 8rem;
     padding-top: 4rem;
+  }
+
+  @media (min-width: 576px) {
+    height: 400px;
+  }
+
+  @media (min-width: 768px) {
+    height: 550px;
+  }
+
+  @media (min-width: 992px) {
+    height: 700px;
+  }
+
+  @media (min-width: 1270px) {
+    height: 830px;
   }
 }
 
@@ -367,40 +456,52 @@ main {
   @media (min-width: 576px) {
     padding: 2rem 1rem;
   }
+
   .feature-box {
     padding: 2rem;
+
     @media (min-width: 768px) {
       padding: 3rem;
     }
+
     &.feat-one {
       background-color: white;
     }
+
     &.feat-two {
       background-color: $secondary;
     }
+
     h2,
     h3 {
       margin-bottom: 1rem;
+
       @media (min-width: 768px) {
         margin-bottom: 2rem;
         font-size: 2em;
       }
+
       @media (min-width: 992px) {
         font-size: 2.4em;
       }
     }
+
     p {
       margin-bottom: 1rem;
+
       @media (min-width: 768px) {
         margin-bottom: 2rem;
       }
     }
   }
+
   .box-container {
     padding: 0;
+
     @media (min-width: 576px) {
       padding: 1rem 2rem;
     }
+
     @media (min-width: 768px) {
       padding: 3rem 2rem;
     }
@@ -410,6 +511,7 @@ main {
 article h2,
 .short-underline {
   text-transform: uppercase;
+
   &::after {
     content: " ";
     display: block;
@@ -423,13 +525,16 @@ article h2,
 // Team
 .team-grid {
   padding: 0;
+
   .team-member {
     margin: .5rem 0;
   }
+
   .member-button {
     margin-top: -2rem;
     position: relative;
     margin-bottom: 2rem;
+
     .btn {
       background-color: #FFF;
     }
@@ -440,24 +545,30 @@ article h2,
 .testimonials {
   .testimonial {
     padding-top: 2.75rem;
+
     &.list {
       padding-bottom: 2rem;
       border-bottom: 1px solid $light;
     }
+
     &:last-child {
       border: none;
     }
+
     &.single .author,
     .testimonial-date {
       color: $light;
       text-transform: uppercase;
     }
+
     &.single {
       padding-top: 3.5rem;
+
       p {
         font-weight: 600;
         line-height: 1.8em;
       }
+
       .author {
         padding: 1.5rem 0 1rem;
         font-size: .9em;
@@ -469,26 +580,46 @@ article h2,
 
 // Footer
 footer {
-  color: #FFF;
+  min-height: 400px;
+  background-image: url('/themes/wordplate/assets/images/footer-texture.png');
+  background-size: cover;
+  width: 100%;
+  height: 360px;
+
   a {
     color: #FFF;
+
     &:hover {
       text-decoration: underline;
       color: #FFF;
     }
   }
+
   h4 {
-    margin: 1rem 0 0;
-    padding: 1rem 0;
-    text-transform: uppercase;
-    font-size: 14px;
+    margin: 33px;
+    color: #FFF;
+    font-family: $playfair;
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
   }
+
+
+  p {
+    font-weight: 100;
+    color: #FFF;
+    font-family: $poppins;
+  }
+
   .footer-menu {
     margin: 0;
     padding: 1rem 0;
+
     .nav-item {
       list-style: none;
       margin: 1.25rem 0;
+
       a {
         font-weight: 600;
         font-size: 14px;
@@ -497,6 +628,7 @@ footer {
         display: inline-block;
         border-bottom: 1px solid transparent;
         transition: border-color .5s linear;
+
         &:hover {
           color: #FFF;
           border-color: rgba(255, 255, 255, .5);
@@ -504,11 +636,19 @@ footer {
       }
     }
   }
+
   .footer-content {
     padding: 1rem;
+    padding-top: 4rem;
   }
+
+  .footer-logo {
+    margin: 2rem 1rem 6rem 2rem;
+  }
+
   .social-icons {
     margin: 0 -.25rem;
+
     svg {
       path: {
         fill: transparent !important;
@@ -517,17 +657,118 @@ footer {
       }
     }
   }
+
   .copyright {
     color: #FFF;
+    background-color: $primary;
     font-size: 12px;
     margin: 0;
+    padding: 1rem;
     line-height: 1.5rem;
   }
+
   hr {
     border-color: #555;
   }
+
   .siteby {
     display: inline-block;
     padding: 0 1rem;
+  }
+}
+
+.container-padding {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer::before {
+  position: absolute;
+  
+  width: 525px;
+  height: 500px;
+  border-radius: 10px;
+  border: 14px solid $primary;
+  content: '';
+}
+
+.cheers {
+  height: 300px;
+  background-color: #fff;
+  background-size: cover;
+  margin: auto;
+
+  @media (min-width: 200px) {
+    height: 400px;
+  }
+
+  @media (min-width: 400px) {
+    height: 550px;
+  }
+
+  @media (min-width: 600px) {
+    height: 700px;
+  }
+
+  @media (min-width: 800px) {
+    height: 830px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .cheersText {
+    padding: 0 0 1rem;
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 22px;
+      font-family: $playfair;
+
+      @media (min-width: 576px) {
+        font-size: 35.5px;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 38px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 40px;
+      }
+
+      @media (min-width: 1270px) {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      padding-top: 1rem;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.6em;
+      width: 680px;
+      max-width: 90% !important;
+      margin: auto;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.services {
+  h1 {
+    font-family: $playfair;
+    color: $primary;
+    font-weight: 400;
+    font-size: 3em;
   }
 }
