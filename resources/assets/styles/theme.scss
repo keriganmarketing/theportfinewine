@@ -273,6 +273,7 @@ main {
     .fittext span,
     h1 {
       color: $primary;
+      font-family: $playfair;
       text-transform: uppercase;
       font-weight: $font-weight-bolder;
       letter-spacing: 2px;
@@ -282,6 +283,7 @@ main {
     ul,
     ol {
       line-height: 1.8em;
+      font-family: $poppins;
     }
 
     h2 {
@@ -365,7 +367,7 @@ main {
 
   h2 {
     font-size: 1.6em;
-    font-weight: 100;
+    font-weight: 200;
   }
 
   p {
@@ -381,6 +383,43 @@ main {
   padding-left: 6rem;
 }
 
+.col-xs-12 {
+  background: #9c6;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  min-height: 200px;
+}
+
+.half-left img,
+.half-right img {
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 481px) {
+
+  .half-left,
+  .half-right {
+    overflow: hidden;
+    padding: 0;
+    position: responsive;
+  }
+
+  .half-left>.container,
+  .half-right>.container {
+    position: absolute;
+    top: 0;
+  }
+
+  .half-left>.container {
+    right: 0;
+  }
+
+  .half-right>.container {
+    left: 0;
+  }
+}
+
 // Map Section
 .background-img {
   min-height: 860px;
@@ -394,6 +433,22 @@ main {
     align-items: center;
     padding-left: 8rem;
     padding-top: 4rem;
+  }
+
+  @media (min-width: 576px) {
+    height: 400px;
+  }
+
+  @media (min-width: 768px) {
+    height: 550px;
+  }
+
+  @media (min-width: 992px) {
+    height: 700px;
+  }
+
+  @media (min-width: 1270px) {
+    height: 830px;
   }
 }
 
@@ -525,7 +580,7 @@ article h2,
 
 // Footer
 footer {
-  min-height: 300px;
+  min-height: 400px;
   background-image: url('/themes/wordplate/assets/images/footer-texture.png');
   background-size: cover;
   width: 100%;
@@ -540,36 +595,21 @@ footer {
     }
   }
 
-  h1 {
+  h4 {
+    margin: 33px;
     color: #FFF;
     font-family: $playfair;
     font-weight: 100;
+    font-size: 24px;
     letter-spacing: 2px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
-  h4 {
-    margin: 1rem 0 0;
-    padding: 1rem 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #FFF;
-    font-family: $playfair;
-  }
 
   p {
+    font-weight: 100;
     color: #FFF;
-    font-family: $playfair;
-  }
-
-  .foot-logo {
-    display: block;
-    padding: 1rem 1.5rem;
-
-    @media (min-width: 1240px) {
-      margin: 2rem 0 0 0;
-      padding: 0 .5rem;
-    }
+    font-family: $poppins;
   }
 
   .footer-menu {
@@ -599,6 +639,11 @@ footer {
 
   .footer-content {
     padding: 1rem;
+    padding-top: 4rem;
+  }
+
+  .footer-logo {
+    margin: 2rem 1rem 6rem 2rem;
   }
 
   .social-icons {
@@ -615,8 +660,10 @@ footer {
 
   .copyright {
     color: #FFF;
+    background-color: $primary;
     font-size: 12px;
     margin: 0;
+    padding: 1rem;
     line-height: 1.5rem;
   }
 
@@ -627,5 +674,101 @@ footer {
   .siteby {
     display: inline-block;
     padding: 0 1rem;
+  }
+}
+
+.container-padding {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer::before {
+  position: absolute;
+  
+  width: 525px;
+  height: 500px;
+  border-radius: 10px;
+  border: 14px solid $primary;
+  content: '';
+}
+
+.cheers {
+  height: 300px;
+  background-color: #fff;
+  background-size: cover;
+  margin: auto;
+
+  @media (min-width: 200px) {
+    height: 400px;
+  }
+
+  @media (min-width: 400px) {
+    height: 550px;
+  }
+
+  @media (min-width: 600px) {
+    height: 700px;
+  }
+
+  @media (min-width: 800px) {
+    height: 830px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .cheersText {
+    padding: 0 0 1rem;
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 22px;
+      font-family: $playfair;
+
+      @media (min-width: 576px) {
+        font-size: 35.5px;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 38px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 40px;
+      }
+
+      @media (min-width: 1270px) {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      padding-top: 1rem;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.6em;
+      width: 680px;
+      max-width: 90% !important;
+      margin: auto;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.services {
+  h1 {
+    font-family: $playfair;
+    color: $primary;
+    font-weight: 400;
+    font-size: 3em;
   }
 }

@@ -4,24 +4,24 @@
             
             <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <h1 class="text-center">Open Hours</h1>
-                    <p class="text-center">Monday-Saturday:<strong>10am-9pm</strong></p>
-                    <p class="text-center">Sunday:<strong>10am-6pm</strong></p>
+                    <h4 class="text-center">Open Hours</h4>
+                    <p class="text-center">Monday-Saturday: <strong>10am-9pm</strong></p>
+                    <p class="text-center">Sunday: <strong>10am-6pm</strong></p>
                     <p class="text-center">All times Eastern</p>
                 </div>
             </div>
 
-            <div class="col-sm footer-center">
-                <div class="text-center foot-logo">
+            <div class="col-sm">
+                <div class="text-center footer-logo">
                     <img src="/themes/wordplate/assets/images/footerlogo.png" alt="THe Port Fine Wine & Spirits" class="img-fluid">
                 </div>
             </div>
 
             <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <h1 class=" text-center">Quick Contacts</h1>
+                    <h4 class="text-center">Quick Contacts</h4>
                     <!--
-                        This Address is a placeholder
+                        This Address is a placeholder, or not, I doubt their address will change.
                     -->
                     <p class="text-center">411 Monument Ave, Port St. Joe, FL 32456</p>
                     <p class="text-center">{!! nl2br(get_field('address', 'option')) !!}</p>
@@ -33,7 +33,6 @@
             
         </div>
     </div>
-    <hr>
     <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
         <a style="text-decoration:underline;" href="/privacy-policy" >Privacy&nbsp;Policy</a> 
         <span class="siteby">
