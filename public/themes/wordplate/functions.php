@@ -6,6 +6,7 @@ use KeriganSolutions\KMATeam\Team;
 use KeriganSolutions\KMAPortfolio\Portfolio;
 use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
+use KeriganSolutions\InstaFeed\InstaFeed;
 use Testing\ContactForm;
 use Testing\KMAMail;
 
@@ -17,6 +18,7 @@ require('testing/ContactForm.php');
 require('post-types/contact_request.php');
 require('testing/KMAMail/KMAMail.php');
 require('testing/KMAMail/Message.php');
+require('testing/InstaFeed/InstaFeed.php');
 
 
 (new Portfolio())->use();
@@ -37,6 +39,9 @@ if (is_admin()) {
 }
 
 new KeriganSolutions\KMASlider\KMASliderModule();
+
+$instagram = new InstaFeed();
+$instagram->setupAdmin();
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

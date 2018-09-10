@@ -5605,6 +5605,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/scripts/components/InstaFeed.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {},
+    data: function data() {
+        return {
+            feedData: {}
+        };
+    },
+    mounted: function mounted() {
+        // http.get("https://api.instagram.com/oauth/authorize/" +
+        //         "?client_id=" + clientID +
+        //         "&redirect_uri=" + redirectURI +
+        //         "&response_type=code")
+        //     .then(response => {
+        //         this.sliderData = response.data; 
+        //     });
+    },
+
+    methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/scripts/components/KMASliderModule.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -20590,6 +20626,41 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-458a506b\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/scripts/components/InstaFeed.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row" },
+    [
+      _vm.code !== "" ? _c("p", [_vm._v(_vm._s(_vm.code))]) : _vm._e(),
+      _vm._v(" "),
+      _vm._l(_vm.feedData, function(item) {
+        return _c("div", {
+          key: item.id,
+          staticClass: "col-6 col-md-4 col-lg-3 col-xl-2"
+        })
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-458a506b", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-524b7986\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/scripts/components/navigation/MainNavigationMenu.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32880,6 +32951,54 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/assets/scripts/components/InstaFeed.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/scripts/components/InstaFeed.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-458a506b\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/scripts/components/InstaFeed.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\scripts\\components\\InstaFeed.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-458a506b", Component.options)
+  } else {
+    hotAPI.reload("data-v-458a506b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./resources/assets/scripts/components/KMASliderModule.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33151,6 +33270,7 @@ Vue.component('kma-slider', __webpack_require__("./resources/assets/scripts/comp
 Vue.component('portfolio-gallery', __webpack_require__("./resources/assets/scripts/components/PortfolioGallery.vue"));
 Vue.component('contact-form', __webpack_require__("./resources/assets/scripts/components/ContactForm.vue"));
 Vue.component('fit-text', __webpack_require__("./resources/assets/scripts/components/FitText.vue"));
+Vue.component('insta-feed', __webpack_require__("./resources/assets/scripts/components/InstaFeed.vue"));
 
 /***/ }),
 

@@ -80,10 +80,9 @@
             </div>
         </div>
 
-        <div class="container">
-            <h1>Just a lil itty bitty section where the insta feed will go</h1>
+        <div class="container-fluid">
+            <insta-feed></insta-feed>
         </div>
-
 
         <div class="row background-img vmiddle">
             <div class="col-12 text-center">
