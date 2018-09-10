@@ -12035,34 +12035,6 @@ body #app .site-wrapper main {
   flex-grow: 1;
 }
 
-body #app .site-wrapper main.contact {
-  background-color: #000;
-}
-
-body #app .site-wrapper main.contact iframe {
-  height: 100%;
-  min-height: 350px;
-  flex-grow: 1;
-}
-
-@media (min-width: 1200px) {
-  body #app .site-wrapper main.contact iframe {
-    min-height: 420px;
-  }
-}
-
-@media (min-width: 2200px) {
-  body #app .site-wrapper main.contact iframe {
-    min-height: 500px;
-  }
-}
-
-@media (min-width: 2600px) {
-  body #app .site-wrapper main.contact iframe {
-    min-height: 650px;
-  }
-}
-
 body #app .site-wrapper.full-height {
   height: 100vh;
 }
@@ -12274,7 +12246,6 @@ main .centered h1 {
 main .centered p {
   color: white;
   line-height: 1.5em;
-  width: 680px;
   max-width: 100% !important;
   margin: auto;
 }
@@ -12282,6 +12253,7 @@ main .centered p {
 @media (min-width: 768px) {
   main .centered p {
     font-size: 1.4em;
+    width: 680px;
   }
 }
 
@@ -12304,6 +12276,7 @@ main article header {
 main article .fittext span,
 main article h1 {
   color: #dfb57b;
+  font-family: "Playfair Display", serif;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
@@ -12313,6 +12286,7 @@ main article p,
 main article ul,
 main article ol {
   line-height: 1.8em;
+  font-family: "Poppins", sans-serif;
 }
 
 main article h2 {
@@ -12342,6 +12316,28 @@ main article h2::after {
   .section-button {
     padding: 1rem 1rem 5rem;
   }
+}
+
+#about .content-image {
+  padding: 0 1.75rem;
+}
+
+#about .content-image img {
+  width: 90%;
+  margin: 10% 0 0 10%;
+  position: relative;
+  z-index: 1;
+}
+
+#about .content-image::before {
+  content: "";
+  height: 0;
+  width: calc(90% - 3.5rem);
+  padding-bottom: 100%;
+  position: absolute;
+  background: url("/themes/wordplate/assets/images/texture.png") no-repeat;
+  background-size: 100% auto;
+  z-index: 0;
 }
 
 .card-section {
@@ -12391,40 +12387,83 @@ main article h2::after {
   padding: 2rem;
 }
 
-.big-text {
-  line-height: 1.8em;
-}
-
-.big-text h2 {
-  font-size: 1.6em;
-  font-weight: 100;
-}
-
-.big-text p {
-  font-size: 1em;
-}
-
-.big-text .big-text-one {
-  line-height: 2em;
-}
-
-.haha-help {
-  padding-left: 6rem;
-}
-
 .background-img {
-  min-height: 860px;
-  background-image: url("/themes/wordplate/assets/images/vectormap.png");
-  background-size: cover;
-  width: 100%;
-  height: 800px;
+  padding: 1rem 0 2rem;
 }
 
-.background-img.vmiddle {
+@media (min-width: 768px) {
+  .background-img {
+    padding: 0;
+    height: 550px;
+    background: url("/themes/wordplate/assets/images/vectormap.png") no-repeat #cba877;
+    background-size: auto 100%;
+    background-position-x: center;
+  }
+
+  .background-img .row,
+  .background-img .nopad {
+    height: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .background-img {
+    height: 850px;
+    background-position-x: -15rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .background-img {
+    background-position-x: -10rem;
+  }
+}
+
+@media (min-width: 1750px) {
+  .background-img {
+    background-position-x: 0rem;
+  }
+}
+
+.background-img .building-photo {
+  position: relative;
+  z-index: 2;
   display: flex;
-  align-items: center;
-  padding-left: 8rem;
-  padding-top: 4rem;
+  justify-content: center;
+}
+
+.background-img .building-photo img {
+  width: 200px;
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .background-img .building-photo img {
+    position: absolute;
+    width: 250px;
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .background-img .building-photo img {
+    width: auto;
+    margin-top: 13rem;
+  }
+}
+
+.background-img iframe {
+  position: relative;
+  z-index: 1;
+  min-height: 350px;
+}
+
+@media (max-width: 767px) {
+  .background-img iframe {
+    border: 3px solid #d2a568 !important;
+    border-radius: .5rem;
+  }
 }
 
 @media (min-width: 576px) {
@@ -12565,7 +12604,14 @@ article h2::after,
 }
 
 footer {
-  color: #FFF;
+  background-image: url("/themes/wordplate/assets/images/footer-texture.png");
+  background-size: cover;
+  width: 100%;
+}
+
+footer i.fa {
+  color: #e13951;
+  padding: 0 .5rem;
 }
 
 footer a {
@@ -12578,10 +12624,19 @@ footer a:hover {
 }
 
 footer h4 {
-  margin: 1rem 0 0;
-  padding: 1rem 0;
-  text-transform: uppercase;
-  font-size: 14px;
+  margin: 33px;
+  color: #FFF;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
+}
+
+footer p {
+  font-weight: 100;
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
 }
 
 footer .footer-menu {
@@ -12610,7 +12665,11 @@ footer .footer-menu .nav-item a:hover {
 }
 
 footer .footer-content {
-  padding: 1rem;
+  padding: 2rem 0;
+}
+
+footer .footer-logo {
+  margin: 2rem 1rem 2rem 2rem;
 }
 
 footer .social-icons {
@@ -12625,8 +12684,10 @@ footer .social-icons svg {
 
 footer .copyright {
   color: #FFF;
+  background-color: #dfb57b;
   font-size: 12px;
   margin: 0;
+  padding: 1rem;
   line-height: 1.5rem;
 }
 
@@ -12637,5 +12698,96 @@ footer hr {
 footer .siteby {
   display: inline-block;
   padding: 0 1rem;
+}
+
+.container-padding {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.cheers {
+  background-color: #fff;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .cheers {
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .cheers {
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .cheers {
+    padding: 6rem 0;
+  }
+}
+
+@media (min-width: 1270px) {
+  .cheers {
+    padding: 8rem 0;
+  }
+}
+
+.cheers .cheersText {
+  padding: 1rem;
+}
+
+.cheers .cheersText p {
+  font-weight: 300;
+  padding: .5rem .75rem;
+}
+
+@media (min-width: 992px) {
+  .cheers .cheersText p {
+    font-size: 20px;
+  }
+}
+
+.cheers .cheersText h1 {
+  font-family: sans-serif;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+}
+
+@media (min-width: 576px) {
+  .cheers .cheersText h1 {
+    font-size: 35.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cheers .cheersText h1 {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cheers .cheersText h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1270px) {
+  .cheers .cheersText h1 {
+    font-size: 42px;
+  }
+}
+
+.services h1 {
+  font-family: "Playfair Display", serif;
+  color: #dfb57b;
+  font-weight: 400;
+  font-size: 3em;
 }
 

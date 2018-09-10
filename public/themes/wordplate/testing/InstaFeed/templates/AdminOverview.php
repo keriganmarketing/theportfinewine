@@ -65,17 +65,18 @@ use KeriganSolutions\InstaFeed\InstaFeed;
                     </div>
 
                     <p class="submit"><input class="button is-primary" type="submit" name="Submit"
-                                             value="<?php _e('Update Settings') ?>"/></p>
+                                             value="<?php _e('Update Settings') ?>"/> <a class="button is-info" href="<?php echo $instagram->getTokenURL(); ?>" >Get New Token</a></p>
 
                 </form>
                 <hr>
-                <a class="button is-primary" href="<?php echo $instagram->getTokenURL(); ?>" >Get New Token</a>
+                
+                <?php $photos = json_decode($instagram->getFeed(9)); ?>
                 <div class="columns is-multiline">
-                    <?php
-
-                        
-                    
-                    ?>
+                    <?php foreach($photos as $photo){ ?>
+                        <div class="column" >
+                            <img src="<?php echo $photo->small; ?>" >
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

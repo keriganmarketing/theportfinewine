@@ -5,14 +5,14 @@
                 <div class="col-lg-6 d-xl-none">
                     <div class="mini-navigation">
                         <ul class="navbar-nav">
-                            <li class="nav-item text-center text-lg-left" >{{ get_field('address', 'option') }}</li>
-                            <li class="nav-item text-center text-lg-left" ><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a></li>
+                            <li class="nav-item text-center text-lg-left" ><i class="fa fa-map-marker" aria-hidden="true"></i> {{ get_field('address', 'option') }}</li>
+                            <li class="nav-item text-center text-lg-left" ><a href="tel:{{ get_field('phone', 'option') }}"><i class="fa fa-phone" aria-hidden="true"></i> {{ get_field('phone', 'option') }}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6 d-xl-none">
                     <div class="mini-navigation">
-                        <p class="text-center text-lg-right" >{{ get_field('hours', 'option') }}</p>
+                        <p class="text-center text-lg-right" ><i class="fa fa-clock-o" aria-hidden="true"></i> {{ get_field('hours', 'option') }}</p>
                     </div>
                 </div>
             </div>
@@ -20,8 +20,8 @@
                 <div class="col-md-4 header-left">
                     <div class="mini-navigation d-none d-xl-block">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item" >{{ get_field('address', 'option') }}</li>
-                            <li class="nav-item" ><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a></li>
+                            <li class="nav-item" ><i class="fa fa-map-marker" aria-hidden="true"></i> {{ get_field('address', 'option') }}</li>
+                            <li class="nav-item" ><a href="tel:{{ get_field('phone', 'option') }}"><i class="fa fa-phone" aria-hidden="true"></i> {{ get_field('phone', 'option') }}</a></li>
                         </ul>
                     </div>
 
@@ -43,7 +43,7 @@
                     
                     <div class="mini-navigation d-none d-xl-block">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item ml-auto" >{{ get_field('hours', 'option') }}</li>
+                            <li class="nav-item ml-auto" ><i class="fa fa-clock-o" aria-hidden="true"></i> {{ get_field('hours', 'option') }}</li>
                         </ul>
                     </div>
 

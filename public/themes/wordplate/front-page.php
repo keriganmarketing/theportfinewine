@@ -1,6 +1,9 @@
 <?php
 
 use KeriganSolutions\KMATestimonials\Testimonial;
+use KeriganSolutions\InstaFeed\InstaFeed;
+
+$instagram = new InstaFeed();
 
 $testimonials = new Testimonial;
 $featuredTestimonial = $testimonials->queryTestimonials(true, 1, 'date', 'DESC', 115);
@@ -26,4 +29,5 @@ bladerunner('views.pages.front', [
     ],
     'projectsHeader' => get_field('projects_header'),
     'featuredTestimonial' => $featuredTestimonial,
+    'photos' => $instagram->getFeed(7),
 ]);

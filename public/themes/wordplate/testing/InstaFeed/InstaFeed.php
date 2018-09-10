@@ -29,12 +29,12 @@ class InstaFeed
 
     public function getTokenURL()
     {
-        return 'https://api.instagram.com/oauth/authorize/?client_id=' . $this->userID . '&redirect_uri=' . $this->redirectURI . '&response_type=code';
+        return 'https://api.instagram.com/oauth/authorize/?client_id=' . $this->userID . '&redirect_uri=' . $this->redirectURI . '&response_type=token';
     }
     
     public function saveToken()
     {
-        $code = (isset($_GET['code']) ? $_GET['code'] : '');
+        $code = (isset($_GET['access_token']) ? $_GET['access_token'] : '');
         if($code != ''){
             update_option('instagram_token', $code);
             return true;
@@ -46,9 +46,11 @@ class InstaFeed
         $client = new Client();
         try {
             $request  = $client->request('GET',
-                'https://api.instagram.com/v1/users/self/media/recent/?access_token=' . $this->accessToken);
+                'https://api.instagram.com/v1/users/self/media/recent?access_token=' . $this->accessToken);
             $response = json_decode($request->getBody());
             $photos   = [];
+
+            // echo '<pre>',print_r($response->data),'</pre>';
 
             foreach ($response->data as $key => $image) {
                 if ($key < $this->num) {
@@ -66,7 +68,9 @@ class InstaFeed
             return json_encode($this->requestContent);
 
         } catch (GuzzleException $e) {
-            error_log( 'Error: ' . $e->getMessage(), 0);
+            $error = 'Error: ' . $e->getMessage();
+            error_log( $error, 0);
+            echo $error;
             $this->saveEmptyCacheFile();
         }
     }
@@ -91,15 +95,14 @@ class InstaFeed
 
     public function getCacheFile()
     {
-        $now      = time();
-        $fileTime = filectime($this->cacheFile);
-
+        $now = time();
         if ( ! file_exists($this->cacheFile)) {
             return false;
         }
 
+        $fileTime = filectime($this->cacheFile);
         $cacheFilecontent = file_get_contents($this->cacheFile);
-        //echo $now, ' - ', $fileTime;
+        // echo $now, ' - ', $fileTime;
 
         if ($now < $fileTime + 3600) {
             //echo 'file is good';
@@ -122,7 +125,6 @@ class InstaFeed
 
     public function setupAdmin()
     {
-        $this->getFeed(20); //set cache file
         add_action('admin_menu', function () {
             $this->addMenus();
         });

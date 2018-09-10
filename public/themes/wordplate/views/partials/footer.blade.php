@@ -1,27 +1,36 @@
-<footer class="sticky-footer bg-black py-4">
-    <div class="container">
+<footer class="sticky-footer bg-black">
+    <div class="container footer-content">
         <div class="row">
             
-            <div class="col-lg-3 text-center text-lg-left">
+            <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <h2 class="playfair text-center">Open Hours</h2>
-                    <p><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a> <em>phone</em></p>
-                    <p><a href="tel:{{ get_field('fax', 'option') }}">{{ get_field('fax', 'option') }}</a> <em>fax</em></p>
-                    <p>{!! nl2br(get_field('address', 'option')) !!}</p>
-                    <h4 class="short-underline">Connect</h4>
-                    <social-icons :size="37" :margin=".25" class="d-flex social-icons" ></social-icons>
+                    <h4 class="text-center">Open Hours</h4>
+                    <p class="text-center">Monday-Saturday: <strong>10am-9pm</strong></p>
+                    <p class="text-center">Sunday: <strong>10am-6pm</strong></p>
+                    <p class="text-center">All times Eastern</p>
                 </div>
             </div>
-            
-            <div class="col-sm-6 col-lg-3 text-md-right">
+
+            <div class="col-sm">
+                <div class="text-center footer-logo">
+                    <img src="/themes/wordplate/assets/images/footerlogo.png" alt="THe Port Fine Wine & Spirits" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-sm text-center text-lg-left">
                 <div class="footer-content">
-                    <main-menu :main-nav="{{ website_menu('footer-navigation') }}" class="footer-menu" ></main-menu>
+                    <h4 class="text-center">Quick Contacts</h4>
+                    <p class="text-center"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        {!! nl2br(get_field('address', 'option')) !!}</p>
+                    <p class="text-center"><a href="tel:{{ get_field('phone', 'option') }}"><i class="fa fa-phone" aria-hidden="true"></i> 
+                        {{ get_field('phone', 'option') }}</a></p>
+                    <p class="text-center contact-info"><a href="mailto:{{ get_field('email', 'option') }}"><i class="fa fa-envelope" aria-hidden="true"></i>
+                        {{ get_field('email', 'option') }}</a></p>
                 </div>
             </div>
             
         </div>
     </div>
-    <hr>
     <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
         <a style="text-decoration:underline;" href="/privacy-policy" >Privacy&nbsp;Policy</a> 
         <span class="siteby">

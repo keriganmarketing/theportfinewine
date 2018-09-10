@@ -543,41 +543,6 @@
         "description": "Home page slider module"
     },
     {
-        "name": "kerigansolutions/kma-social-icons",
-        "version": "1.2",
-        "version_normalized": "1.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-            "reference": "0a305241adb7c161435dae8c73b40b786c822b8f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/0a305241adb7c161435dae8c73b40b786c822b8f",
-            "reference": "0a305241adb7c161435dae8c73b40b786c822b8f",
-            "shasum": ""
-        },
-        "time": "2018-07-13T16:21:45+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "KeriganSolutions\\SocialMedia\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Daron Adkins",
-                "email": "daron@kerigan.com"
-            }
-        ],
-        "description": "WordPress module to configure social media icons"
-    },
-    {
         "name": "kerigansolutions/kma-team-module",
         "version": "1.2",
         "version_normalized": "1.2.0.0",
@@ -2370,5 +2335,40 @@
             "rest",
             "web service"
         ]
+    },
+    {
+        "name": "kerigansolutions/kma-social-icons",
+        "version": "1.3",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kerigansolutions/kma-social-icons.git",
+            "reference": "87f8018c5b1e3144e1f308f42e229ed9d1510323"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/87f8018c5b1e3144e1f308f42e229ed9d1510323",
+            "reference": "87f8018c5b1e3144e1f308f42e229ed9d1510323",
+            "shasum": ""
+        },
+        "time": "2018-09-10T20:58:53+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "KeriganSolutions\\SocialMedia\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daron Adkins",
+                "email": "daron@kerigan.com"
+            }
+        ],
+        "description": "WordPress module to configure social media icons"
     }
 ]
