@@ -5638,18 +5638,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-
         this.photos = this.feedData;
-        // http.get("https://api.instagram.com/oauth/authorize/" +
-        //         "?client_id=" + clientID +
-        //         "&redirect_uri=" + redirectURI +
-        //         "&response_type=code")
-        //     .then(response => {
-        //         this.sliderData = response.data; 
-        //     });
-    },
-
-    methods: {}
+    }
 });
 
 /***/ }),
@@ -15350,7 +15340,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.instafeed .image-container {\n  overflow: hidden;\n  height: 0;\n  padding-bottom: 100%;\n  text-align: center;\n}\n.instafeed .image-container img {\n    width: 100%;\n    min-height: 100%;\n    min-width: 100%;\n    position: relative;\n}\n.instafeed .insta-link {\n  display: block;\n  height: 100%;\n}\n.instafeed .insta-link .insta-link-container {\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    padding: 2rem;\n    background-color: #b65838;\n}\n.instafeed .insta-link .insta-link-container .icon {\n      font-size: 6em;\n}\n.instafeed .insta-link .insta-link-container .text {\n      font-size: 2em;\n      padding: .5rem 0;\n}\n", ""]);
+exports.push([module.i, "\n.instafeed .image-container {\n  overflow: hidden;\n  height: 0;\n  padding-bottom: 100%;\n  text-align: center;\n}\n.instafeed .image-container img {\n    width: 100%;\n    min-height: 100%;\n    min-width: 100%;\n    position: relative;\n}\n.instafeed .insta-link {\n  display: block;\n  height: 100%;\n}\n.instafeed .insta-link .insta-link-container {\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    padding: 1rem 1rem 0;\n    background-color: #b65838;\n}\n@media (min-width: 560px) {\n.instafeed .insta-link .insta-link-container {\n        padding: 2rem;\n}\n}\n.instafeed .insta-link .insta-link-container .icon {\n      font-size: 3em;\n      margin: 0;\n}\n@media (min-width: 560px) {\n.instafeed .insta-link .insta-link-container .icon {\n          font-size: 4.5em;\n}\n}\n@media (min-width: 769px) {\n.instafeed .insta-link .insta-link-container .icon {\n          font-size: 6em;\n}\n}\n.instafeed .insta-link .insta-link-container .text {\n      font-size: 1em;\n      margin: 0;\n}\n@media (min-width: 560px) {\n.instafeed .insta-link .insta-link-container .text {\n          font-size: 1.3em;\n          padding: .5rem 0;\n}\n}\n@media (min-width: 768px) {\n.instafeed .insta-link .insta-link-container .text {\n          font-size: 2em;\n          padding: .5rem 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -20687,7 +20677,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-8 col-xl-3 text-center" }, [
+    return _c("div", { staticClass: "col-6 col-md-8 col-xl-3 text-center" }, [
       _c(
         "a",
         {

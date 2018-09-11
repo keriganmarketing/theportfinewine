@@ -1,17 +1,10 @@
 <?php
 
-use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\InstaFeed\InstaFeed;
 
 $instagram = new InstaFeed();
 
-$testimonials = new Testimonial;
-$featuredTestimonial = $testimonials->queryTestimonials(true, 1, 'date', 'DESC', 115);
-
 bladerunner('views.pages.front', [
-    'locations' => json_encode(get_terms([
-        'taxonomy' => 'build-location',
-    ])),
     'featureBox1' => [
         'title' => get_field('feat_1_headline'),
         'text' => get_field('feat_1_text'),
@@ -27,7 +20,9 @@ bladerunner('views.pages.front', [
         'text' => get_field('feat_3_text'),
         'link' => get_field('feat_3_link')
     ],
-    'projectsHeader' => get_field('projects_header'),
-    'featuredTestimonial' => $featuredTestimonial,
+    'mast' => [
+        'headline' => get_field('mast_headline'),
+        'content' => get_field('mast_supporttext'),
+    ],
     'photos' => $instagram->getFeed(7),
 ]);

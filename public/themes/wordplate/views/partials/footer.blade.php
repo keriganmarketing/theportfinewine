@@ -2,12 +2,10 @@
     <div class="container footer-content">
         <div class="row">
             
-            <div class="col-sm text-center text-lg-left">
+            <div class="col-sm text-center">
                 <div class="footer-content">
-                    <h4 class="text-center">Open Hours</h4>
-                    <p class="text-center">Monday-Saturday: <strong>10am-9pm</strong></p>
-                    <p class="text-center">Sunday: <strong>10am-6pm</strong></p>
-                    <p class="text-center">All times Eastern</p>
+                    <h4>Open Hours</h4>
+                    {!! nl2br(get_field('footer_hours', 'option')) !!}
                 </div>
             </div>
 

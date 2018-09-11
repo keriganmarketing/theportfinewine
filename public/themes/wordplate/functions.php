@@ -2,43 +2,37 @@
 
 declare(strict_types=1);
 
-use KeriganSolutions\KMATeam\Team;
-use KeriganSolutions\KMAPortfolio\Portfolio;
-use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
 use KeriganSolutions\InstaFeed\InstaFeed;
-use Testing\ContactForm;
-use Testing\KMAMail;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 require template_path('includes/plugins/theme-setup.php');
 require template_path('includes/plugins/acf-page-fields.php');
-require('testing/ContactForm.php');
-require('post-types/contact_request.php');
-require('testing/KMAMail/KMAMail.php');
-require('testing/KMAMail/Message.php');
+
 require('testing/InstaFeed/InstaFeed.php');
 
-
-(new Portfolio())->use();
-(new Testimonial())->menuIcon('editor-quote')->use();
-(new Team())->use();
 (new ContactInfo())->addField([
-    'key' => 'license_number',
-    'label' => 'License Number',
-    'name' => 'license_number',
+    'key' => 'hours',
+    'label' => 'Hours',
+    'name' => 'hours',
     'type' => 'text',
     'parent' => 'group_contact_info',
+])->addField([
+    'key' => 'footer_hours',
+    'label' => 'Expanded Hours',
+    'name' => 'footer_hours',
+    'type' => 'wysiwyg',
+    'parent' => 'group_contact_info',
+    'tabs' => 'text',
+    'toolbar' => 'basic',
+    'media_upload' => 0,
 ])->use();
-new ContactForm();
 
 $socialLinks = new KeriganSolutions\SocialMedia\SocialSettingsPage();
 if (is_admin()) {
     $socialLinks->createPage();
 }
-
-new KeriganSolutions\KMASlider\KMASliderModule();
 
 $instagram = new InstaFeed();
 $instagram->setupAdmin();
@@ -96,66 +90,3 @@ function expand_login_logo()
 <?php
 }
 add_action('login_enqueue_scripts', 'expand_login_logo');
-
-
-function team_shortcode() {
-    $output =
-    '<div class="team-grid">
-        <div class="row justify-content-center">';
-
-    $team = new Team();
-    $members = $team->queryTeam();
-
-    foreach($members as $member){
-        $output .=
-        '<div class="col-md-6 col-lg-4">
-            <div class="card team-member text-center">
-                <a href="' . $member['link'] . '" >
-                    <img src="' . $member['image']['sizes']['thumbnail'] . '" class="card-img-top" alt="' . $member['name'] . '" >
-                </a>
-                <div class="card-body">
-                    <h3 class="text-uppercase text-dark">' . $member['name'] . '</h3>
-                    <p class="text-uppercase text-light">' . $member['title'] . '</p>
-                    <p class="text-uppercase text-light">
-                    <a href="mailto:' . $member['email'] . '" >' . $member['email'] . '</a><br>
-                    <a href="tel:' . $member['phone'] . '" >' . $member['phone'] . '</p>
-                </div>
-            </div>
-            <div class="member-button text-center">
-                <a href="' . $member['link'] . '" class="btn btn-outline-light" >View Bio</a>
-            </div>
-        </div>';
-    }
-
-    $output .= '</div></div>';
-
-    return $output;
-}
-add_shortcode( 'team', 'team_shortcode' );
-
-function testimonial_shortcode( $atts ) {
-    $a = shortcode_atts( [
-        'limit'    => -1,
-        'featured' => false,
-        'order'    => 'ASC',
-        'orderby'  => 'menu_order'
-    ], $atts );
-
-    $testimonials = new Testimonial;
-    $list = $testimonials->queryTestimonials($a['featured'], $a['limit'], $a['orderby'], $a['order']);
-
-    $output = '<div class="testimonials" >';
-    foreach ($list as $item) {
-        $output .= '
-        <div class="testimonial list" id="' . $item->ID . '" >
-            <p class="testimonial-date" >' . get_the_date('', $item) . '</p>
-            ' . apply_filters('the_content', $item->post_content) . '
-            <p class="author" >&mdash;' . $item->byline . '</p>
-        </div>
-        ';
-    }
-    $output .= '</div>';
-
-    return $output;
-}
-add_shortcode( 'kma_testimonials', 'testimonial_shortcode' );

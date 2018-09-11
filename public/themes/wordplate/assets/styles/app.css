@@ -12034,6 +12034,11 @@ body #app .site-wrapper.full-height {
   width: 100%;
 }
 
+.top i.fa {
+  color: #dfb57b;
+  padding: 0 .5rem;
+}
+
 .top .topnav {
   padding: 0;
 }
@@ -12197,41 +12202,48 @@ main .centered {
   padding: 0 1rem 1rem;
 }
 
-main .centered h1 {
+@media (min-width: 992px) {
+  main .centered {
+    padding: 0 1rem 5rem;
+  }
+}
+
+main .centered .maintext {
   color: #dfb57b;
   text-transform: uppercase;
   font-family: sans-serif;
+  font-weight: 600;
   font-size: 3em;
   font-family: "Playfair Display", serif;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 @media (min-width: 576px) {
-  main .centered h1 {
+  main .centered .maintext {
     font-size: 4.5em;
   }
 }
 
 @media (min-width: 768px) {
-  main .centered h1 {
-    padding-bottom: 1.5rem;
+  main .centered .maintext {
     font-size: 7em;
   }
 }
 
 @media (min-width: 992px) {
-  main .centered h1 {
+  main .centered .maintext {
     font-size: 9em;
   }
 }
 
 @media (min-width: 1270px) {
-  main .centered h1 {
+  main .centered .maintext {
     font-size: 11em;
   }
 }
 
-main .centered p {
+main .centered p.supporttext {
   color: white;
   line-height: 1.5em;
   max-width: 100% !important;
@@ -12239,7 +12251,7 @@ main .centered p {
 }
 
 @media (min-width: 768px) {
-  main .centered p {
+  main .centered p.supporttext {
     font-size: 1.4em;
     width: 680px;
   }
@@ -12261,13 +12273,11 @@ main article header {
   margin-bottom: 1rem;
 }
 
-main article .fittext span,
 main article h1 {
   color: #dfb57b;
   font-family: "Playfair Display", serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 3em;
 }
 
 main article p,
@@ -12275,12 +12285,13 @@ main article ul,
 main article ol {
   line-height: 1.8em;
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 main article h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  color: #e13951;
+  color: #222222;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -12335,18 +12346,43 @@ main article h2::after {
 }
 
 .card-section .card {
-  border-radius: 11px 11px 0 0;
+  border-radius: 11px;
   height: 100%;
+  overflow: hidden;
+  border-width: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.card-section .card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.card-section .card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: .5rem;
+}
+
+@media (min-width: 768px) {
+  .card-section .card p {
+    font-size: 18px;
+  }
 }
 
 .card-section .card-image-container {
   overflow: hidden;
   height: 0;
-  padding-bottom: 100%;
+  padding-bottom: 98%;
   text-align: left;
   position: relative;
   border-radius: 11px 11px 0 0;
   z-index: 1;
+  border: none;
+  background-color: #222222;
 }
 
 .card-section .card-image-container img {
@@ -12772,10 +12808,21 @@ footer .siteby {
   }
 }
 
+.cheers .cheersText h1 .titlemark {
+  padding: 0 .75rem 0 0;
+  margin: -.75rem 0 0 -.5rem;
+}
+
 .services h1 {
   font-family: "Playfair Display", serif;
   color: #dfb57b;
   font-weight: 400;
   font-size: 3em;
+}
+
+#gallery {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 

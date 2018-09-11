@@ -47,6 +47,11 @@ body {
   z-index: 6;
   width: 100%;
 
+  i.fa {
+    color: $primary;
+    padding: 0 .5rem;
+  }
+
   .topnav {
     padding: 0;
   }
@@ -196,20 +201,25 @@ main {
   .centered {
     padding: 0 1rem 1rem;
 
-    h1 {
+    @media (min-width: 992px) {
+      padding: 0 1rem 5rem;
+    }
+
+    .maintext {
       color: #dfb57b;
       text-transform: uppercase;
       font-family: sans-serif;
+      font-weight: 600;
       font-size: 3em;
       font-family: $playfair;
       text-shadow: 0 0 15px rgba(0, 0, 0, .5);
+      margin: 0;
 
       @media (min-width: 576px) {
         font-size: 4.5em;
       }
 
       @media (min-width: 768px) {
-        padding-bottom: 1.5rem;
         font-size: 7em;
       }
 
@@ -222,7 +232,7 @@ main {
       }
     }
 
-    p {
+    p.supporttext {
       color: white;
       line-height: 1.5em;
       max-width: 100% !important;
@@ -248,13 +258,11 @@ main {
       margin-bottom: 1rem;
     }
 
-    .fittext span,
     h1 {
       color: $primary;
       font-family: $playfair;
-      text-transform: uppercase;
-      font-weight: $font-weight-bolder;
-      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 3em;
     }
 
     p,
@@ -262,12 +270,13 @@ main {
     ol {
       line-height: 1.8em;
       font-family: $poppins;
+      font-weight: 300;
     }
 
     h2 {
       margin-top: 3rem;
       margin-bottom: 1rem;
-      color: $secondary;
+      color: $dark;
       font-weight: 400;
       text-transform: capitalize;
 
@@ -325,18 +334,41 @@ main {
   padding: 4rem 0;
 
   .card {
-    border-radius: 11px 11px 0 0;
+    border-radius: 11px;
     height: 100%;
+    overflow: hidden;
+    border-width: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+
+    h2 {
+      font-family: $playfair;
+      font-size: 2em;
+      font-weight: 300;
+      margin: 1rem 0;
+    }
+
+    p {
+      font-family: $poppins;
+      font-size: 16px;
+      font-weight: 300;
+      padding: .5rem;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
   }
 
   .card-image-container {
     overflow: hidden;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 98%;
     text-align: left;
     position: relative;
     border-radius: 11px 11px 0 0;
     z-index: 1;
+    border:none;
+    background-color: $dark;
 
     img {
       display: block;
@@ -729,6 +761,11 @@ footer {
       @media (min-width: 1270px) {
         font-size: 42px;
       }
+
+      .titlemark {
+        padding: 0 .75rem 0 0;
+        margin: -.75rem 0 0 -.5rem;
+      }
     }
   }
 }
@@ -740,4 +777,10 @@ footer {
     font-weight: 400;
     font-size: 3em;
   }
+}
+
+#gallery {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
 }

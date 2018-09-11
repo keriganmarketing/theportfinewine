@@ -143,7 +143,7 @@ function registerFields(){
         'hide_on_screen'        => '',
     ) );
 
-    // Feature Box 1 Headline
+    // Feature Box 2 Headline
     acf_add_local_field( array(
         'key'          => 'feat_2_headline',
         'label'        => 'Headline',
@@ -154,7 +154,7 @@ function registerFields(){
         'required'     => 0,
     ) );
 
-    // Feature Box 1 Content
+    // Feature Box 2 Content
     acf_add_local_field( array(
         'key'          => 'feat_2_text',
         'label'        => 'Content',
@@ -165,7 +165,7 @@ function registerFields(){
         'required'     => 0,
     ) );
 
-    // Feature Box 1 Link
+    // Feature Box 2 Link
     acf_add_local_field( array(
         'key'          => 'feat_2_link',
         'label'        => 'Link',
@@ -176,12 +176,100 @@ function registerFields(){
         'required'     => 0,
     ) );
 
-    acf_add_local_field(array(
-        'key' => 'hours',
-        'label' => 'Hours',
-        'name' => 'hours',
-        'type' => 'text',
-        'parent' => 'group_contact_info',
-    ));
+    // ACF Group: Home Page Feature Box 3
+    acf_add_local_field_group( array (
+        'key'      => 'group_feat_box_3',
+        'title'    => 'Feature Box 3',
+        'location' => array (
+            array (
+                array (
+                    'param'    => 'page_type',
+                    'operator' => '==',
+                    'value'    => 'front_page',
+                )
+            ),
+        ),
+        'menu_order'            => 0,
+        'position'              => 'normal',
+        'style'                 => 'default',
+        'label_placement'       => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen'        => '',
+    ) );
 
+    // Feature Box 3 Headline
+    acf_add_local_field( array(
+        'key'          => 'feat_3_headline',
+        'label'        => 'Headline',
+        'name'         => 'feat_3_headline',
+        'type'         => 'text',
+        'parent'       => 'group_feat_box_3',
+        'instructions' => '',
+        'required'     => 0,
+    ) );
+
+    // Feature Box 3 Content
+    acf_add_local_field( array(
+        'key'          => 'feat_3_text',
+        'label'        => 'Content',
+        'name'         => 'feat_3_text',
+        'type'         => 'textarea',
+        'parent'       => 'group_feat_box_3',
+        'instructions' => '',
+        'required'     => 0,
+    ) );
+
+    // Feature Box 3 Link
+    acf_add_local_field( array(
+        'key'          => 'feat_3_link',
+        'label'        => 'Link',
+        'name'         => 'feat_3_link',
+        'type'         => 'link',
+        'parent'       => 'group_feat_box_3',
+        'instructions' => '',
+        'required'     => 0,
+    ) );
+
+    // ACF Group: Home Page Mast Area
+    acf_add_local_field_group( array (
+        'key'      => 'group_mast',
+        'title'    => 'Header Area',
+        'location' => array (
+            array (
+                array (
+                    'param'    => 'page_type',
+                    'operator' => '==',
+                    'value'    => 'front_page',
+                )
+            ),
+        ),
+        'menu_order'            => 0,
+        'position'              => 'acf_after_title',
+        'style'                 => 'default',
+        'label_placement'       => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen'        => '',
+    ) );
+
+    // Mast Main Test
+    acf_add_local_field( array(
+        'key'          => 'mast_headline',
+        'label'        => 'Headline',
+        'name'         => 'mast_headline',
+        'type'         => 'text',
+        'parent'       => 'group_mast',
+        'instructions' => '',
+        'required'     => 0,
+    ) );
+
+    // Mast Support Test
+    acf_add_local_field( array(
+        'key'          => 'mast_supporttext',
+        'label'        => 'Content',
+        'name'         => 'mast_supporttext',
+        'type'         => 'textarea',
+        'parent'       => 'group_mast',
+        'instructions' => '',
+        'required'     => 0,
+    ) );
 }

@@ -4,8 +4,7 @@
 @if (have_posts())
     @while (have_posts())
         {{ the_post() }}
-        @include('partials.mast')
-        <main role="main">
+        <main role="main" class="py-5">
             <div class="container">
                 <article class="support">
                     <header class="text-primary">
