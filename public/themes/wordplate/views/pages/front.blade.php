@@ -35,7 +35,7 @@
         
         <div id="services" class="card-section">
             <div class="text-center services">
-                <h1>Services</h1>
+                <h2>Services</h2>
             </div>
             <div class="container">
                 <div class="row justify-content-center">
