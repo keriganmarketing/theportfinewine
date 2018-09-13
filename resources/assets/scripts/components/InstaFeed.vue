@@ -9,7 +9,7 @@
             <a class="insta-link" href="https://www.instagram.com/theportfinewine/" target="_blank">
             <div class="insta-link-container align-items-center justify-content-center" >
                 <p class="text-white icon"><i class="fa fa-instagram" aria-hidden="true"></i></p>
-                <p class="text-white text">Follow Port Fine Wine & Spirits on Instagram</p>
+                <p class="text-white text">Follow The Port Fine Wine & Spirits on Instagram</p>
             </div>
             </a>
         </div>
