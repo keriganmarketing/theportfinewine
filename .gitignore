@@ -6,4 +6,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 Vagrantfile
-./vendor/
+
+vendor
+node_modules

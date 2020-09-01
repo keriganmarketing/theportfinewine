@@ -1,3 +1,8 @@
 languages
 upgrade
 *.cache/*
+wordpress
+plugins/
+!plugins/index.php
+uploads/
+upgrade

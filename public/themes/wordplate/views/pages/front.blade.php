@@ -80,7 +80,7 @@
         </div>
 
         <div id="gallery">
-            <insta-feed :feed-data='{{ $photos }}'></insta-feed>
+            {{-- <insta-feed :feed-data='{{ $photos }}'></insta-feed> --}}
         </div>
 
         <div id="contact" class="background-img">

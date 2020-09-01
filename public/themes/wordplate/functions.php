@@ -3,10 +3,9 @@
 declare(strict_types=1);
 
 use KeriganSolutions\KMAContactInfo\ContactInfo;
-use KeriganSolutions\InstaFeed\InstaFeed;
+// use KeriganSolutions\InstaFeed\InstaFeed;
 
 // Register plugin helpers.
-require template_path('includes/plugins/plate.php');
 require template_path('includes/plugins/theme-setup.php');
 require template_path('includes/plugins/acf-page-fields.php');
 
@@ -34,8 +33,8 @@ if (is_admin()) {
     $socialLinks->createPage();
 }
 
-$instagram = new InstaFeed();
-$instagram->setupAdmin();
+// $instagram = new InstaFeed();
+// $instagram->setupAdmin();
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

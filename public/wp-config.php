@@ -37,7 +37,7 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $application = new WordPlate\Application(
-    realpath(__DIR__)
+    realpath(__DIR__.'/../')
 );
 
 /*
@@ -88,5 +88,7 @@ $application->run();
 | include here in order to support WP-CLI.
 |
 */
+
+define('WP_AUTO_UPDATE_CORE','minor');
 
 require_once ABSPATH.'wp-settings.php';

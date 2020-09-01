@@ -2,7 +2,7 @@
 
 use KeriganSolutions\InstaFeed\InstaFeed;
 
-$instagram = new InstaFeed();
+// $instagram = new InstaFeed();
 
 bladerunner('views.pages.front', [
     'featureBox1' => [
@@ -24,5 +24,5 @@ bladerunner('views.pages.front', [
         'headline' => get_field('mast_headline'),
         'content' => get_field('mast_supporttext'),
     ],
-    'photos' => $instagram->getFeed(7),
+    // 'photos' => $instagram->getFeed(7),
 ]);
